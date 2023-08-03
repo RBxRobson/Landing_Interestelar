@@ -3,9 +3,11 @@ const gulp = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 const imagemin = require('gulp-imagemin');
 const htmlmin = require('gulp-htmlmin');
+const uglify = require('gulp-uglify');
+const obfuscate = require('gulp-obfuscate');
 
 function compress_sass() {
-    return gulp.src('./src/styles/*.scss')
+    return gulp.src('./src/styles/main.scss')
         .pipe(sass({ outputStyle: "compressed" }))
         .pipe(gulp.dest("./dist/styles"));
 }
@@ -22,7 +24,13 @@ function compress_html() {
         .pipe(gulp.dest('./dist'));
 }
 
-exports.default = gulp.parallel(compress_img, compress_sass, compress_html);
+function compress_JS() {
+    return gulp.src('./src/scripts/*.js')
+        .pipe(obfuscate())
+        .pipe(gulp.dest('./dist/scripts'));
+}
+
+exports.default = gulp.parallel(compress_img, compress_sass, compress_html, compress_JS);
 exports.watch = function () {
-    gulp.watch('./src/styles/*.scss', gulp.parallel(compress_sass));
+    gulp.watch('./src/styles/*.scss', gulp.parallel(compress_sass, compress_JS));
 }

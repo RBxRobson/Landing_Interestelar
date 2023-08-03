@@ -1,3 +1,6 @@
+@use "header";
+@use "variaveis";
+
 * {
     box-sizing: border-box;
     padding: 0;
@@ -5,43 +8,24 @@
 }
 
 body {
-    background-color: #000;
+    background-color: variaveis.$background;
 }
 
-.header {
-    height: 150px;
+.container {
+    padding: 5vw;
+}
+
+.button {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    background-image: url(../imgs/nebulous_background.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    box-shadow: rgb(0, 0, 0) 0px -60px 50px -20px inset;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    border-radius: 4px;
+    background-color: rgba(255, 255, 255, 0.15);
+    transition: .5s ease;
 
-    &__images {
-        padding-bottom: 1vh;
-        padding-left: 2vw;
-
-        .logo {
-            position: fixed;
-            left: 150px;
-            height: 100px;
-        }
-
-        .foguete {
-            height: 100px;
-            transition: 1.5s ease;
-            cursor: pointer;
-            transform: rotate(45deg) scale(.7);
-            filter: grayscale(100%);
-        }
-
-        .foguete:hover {
-            padding-left: 12vw;
-            padding-bottom: 10vh;
-            transform: rotate(-40deg);
-        }
-
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.25);
     }
-
 }

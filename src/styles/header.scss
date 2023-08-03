@@ -1,0 +1,78 @@
+.header {
+    background-image: url(../imgs/nebulous_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: rgb(0, 0, 0) 0px -60px 50px -20px inset;
+
+    .container {
+        padding: 3rem 5rem;
+        max-height: 200px;
+    }
+
+    &__content {
+        margin-top: -2rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__title {
+        max-height: 100px;
+
+        &__logo {
+            width: 320px;
+            height: 100px;
+        }
+    }
+
+    .foguete {
+        opacity: .8;
+        height: 100px;
+        transition: 1.5s ease;
+        transform: rotate(-135deg) scale(.7);
+
+    }
+
+    &__menu {
+        display: flex;
+        align-items: center;
+
+        &__button {
+            padding: 2px;
+            margin-left: 10px;
+
+            .icon {
+                width: 40px;
+            }
+        }
+
+        &__itens {
+            display: none;
+            color: #ffffff;
+            gap: 0 10px;
+            overflow: hidden;
+            transition: 1s linear;
+
+            .button {
+                color: #ffffff;
+                font-size: 20px;
+                font-weight: bold;
+                padding: 10.5px;
+            }
+        }
+
+        &--is-open {
+            .foguete::after {
+                padding-left: 12vw;
+                padding-bottom: 10vh;
+                transform: rotate(-40deg);
+            }
+
+            .header__menu__itens {
+                display: flex;
+                transition: 1s all ease;
+            }
+
+        }
+    }
+}

@@ -11,11 +11,26 @@
 
 <body>
     <header class="header">
-        <div class="header__images">
-            <img class="logo" src="./imgs/logo_interestellar.png" alt="Logo interestelar">
-            <img class="foguete" src="./imgs/startup.png" alt="" srcset="">
+        <div class="container">
+            <div class="header__content">
+                <h1 class="header__title">
+                    <img class="header__title__logo" src="./imgs/logo_interestellar.png" alt="Logo interestelar">
+                </h1>
+                <nav class="header__menu">
+                    <img class="foguete" src="./imgs/startup.png" alt="Foguete">
+                    <div class="header__menu__itens">
+                        <a class="button" href="#">Home</a>
+                        <a class="button" href="#">Sinopse</a>
+                        <a class="button" href="#">Personagens</a>
+                    </div>
+                    <button data-menu-open class="button header__menu__button">
+                        <img class="icon" src="./imgs/hamburguer.svg">
+                    </button>
+                </nav>
+            </div>
         </div>
     </header>
+    <script src="./scripts/main.js"></script>
 </body>
 
 </html>
