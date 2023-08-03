@@ -1,0 +1,47 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #000;
+}
+
+.header {
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-image: url(../imgs/nebulous_background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: rgb(0, 0, 0) 0px -60px 50px -20px inset;
+
+    &__images {
+        padding-bottom: 1vh;
+        padding-left: 2vw;
+
+        .logo {
+            position: fixed;
+            left: 150px;
+            height: 100px;
+        }
+
+        .foguete {
+            height: 100px;
+            transition: 1.5s ease;
+            cursor: pointer;
+            transform: rotate(45deg) scale(.7);
+            filter: grayscale(100%);
+        }
+
+        .foguete:hover {
+            padding-left: 12vw;
+            padding-bottom: 10vh;
+            transform: rotate(-40deg);
+        }
+
+    }
+
+}
