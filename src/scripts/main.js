@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
 })
 
 function openOrClose() {
-    const classe = 'header__menu--is-open';
-    const nav = document.querySelector('.header__menu')
+    const classe = 'content__menu--is-open';
+    const nav = document.querySelector('.content__menu')
     nav.classList.toggle(classe);
 }

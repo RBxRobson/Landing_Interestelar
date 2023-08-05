@@ -2,30 +2,33 @@
 @use "variaveis";
 
 * {
-    box-sizing: border-box;
-    padding: 0;
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
 }
 
 body {
     background-color: variaveis.$background;
+
 }
 
 .container {
-    padding: 5vw;
+    width: 80%;
+    margin: 0 auto;
 }
 
 .button {
     display: flex;
     align-items: center;
-    border: none;
+    border: 2px solid rgba(255, 255, 255, 0.50);
     cursor: pointer;
     text-decoration: none;
     border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.15);
+    background-color: rgba(255, 255, 255, 0.30);
     transition: .5s ease;
 
     &:hover {
-        background-color: rgba(255, 255, 255, 0.25);
+        background-color: rgba(255, 255, 255, 0.35);
     }
 }
