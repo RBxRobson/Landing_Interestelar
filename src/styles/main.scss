@@ -1,17 +1,20 @@
 @use "header";
 @use "variaveis";
 @use "sinopse";
+@use "personagens";
 
 @font-face {
     font-family: Roboto;
     src: url(../../assets/fonts/Roboto-Regular.woff2);
     font-weight: 400;
+    font-display: swap;
 }
 
 @font-face {
     font-family: Didot;
     src: url(../../assets/fonts/DidotLTPro-Bold.woff2);
     font-weight: 700;
+    font-display: swap;
 }
 
 * {
