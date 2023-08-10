@@ -13,7 +13,7 @@ function compress_sass() {
 }
 
 function compress_img() {
-    return gulp.src('./src/imgs/*')
+    return gulp.src('./src/imgs/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('./dist/imgs'));
 }
