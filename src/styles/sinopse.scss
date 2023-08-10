@@ -1,0 +1,70 @@
+.sinopse {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    padding: 10vh 0;
+    column-gap: 5%;
+    margin: 0 auto;
+
+    @media (max-width: 1024px) {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 5vh 0;
+    }
+
+    &__carousel {
+        overflow: hidden;
+
+        &__container {
+            display: flex;
+            transition: transform 0.5s ease-in-out;
+            transform: translateX(0);
+
+            @media (max-width: 1024px) {
+                max-width: 100%;
+            }
+
+            @media (max-width: 767px) {
+                max-width: 550px;
+                box-shadow: rgb(0, 0, 0) -50px -50px 40px -25px inset, rgb(0, 0, 0) 50px 50px 40px -25px inset;
+            }
+
+            a {
+                min-width: 100%;
+                box-shadow: rgb(0, 0, 0) -50px -50px 40px -10px inset, rgb(0, 0, 0) 50px 50px 40px -10px inset;
+
+                img {
+                    mix-blend-mode: color-burn;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    &__text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        max-width: 100%;
+
+        @media (max-width: 767px) {
+            width: 90%;
+            max-width: 550px;
+        }
+
+        @media (max-width: 1024px) {
+            padding-top: 3vh;
+        }
+
+        p {
+            padding: 2vh 0;
+
+            @media (max-width: 1300px) {
+                padding: .5vh 0;
+            }
+        }
+    }
+}

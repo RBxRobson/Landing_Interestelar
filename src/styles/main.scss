@@ -1,21 +1,74 @@
 @use "header";
 @use "variaveis";
+@use "sinopse";
+
+@font-face {
+    font-family: Roboto;
+    src: url(../../assets/fonts/Roboto-Regular.woff2);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Didot;
+    src: url(../../assets/fonts/DidotLTPro-Bold.woff2);
+    font-weight: 700;
+}
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Roboto, sans-serif;
 }
 
 body {
     background-color: variaveis.$background;
+}
+
+@mixin text ($fontSize: 22px) {
+    font-size: $fontSize;
+    font-family: Roboto, sans-serif;
+    color: variaveis.$textColor;
+}
+
+@mixin title ($fontSize: 28px) {
+    font-size: $fontSize;
+    font-family: Didot, sans-serif;
+    color: variaveis.$textColor;
+}
+
+.text {
+    @include text;
+
+    @media (max-width: 1300px) {
+        @include text(18px);
+    }
+
+    @media (max-width: 767px) {
+        @include text(16px);
+    }
+}
+
+.title {
+    @include title;
+
+    @media (max-width: 1300px) {
+        @include title(24px);
+    }
+
+    @media (max-width: 767px) {
+        @include title(22px);
+    }
 
 }
 
 .container {
     width: 80%;
     margin: 0 auto;
+
+    @media (max-width: 767px) {
+        width: 100%;
+    }
 }
 
 .button {
