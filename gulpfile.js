@@ -1,10 +1,10 @@
 
-var gulp = require('gulp');
-var sass = require('gulp-sass')(require('sass'));
-var imagemin = require('gulp-imagemin');
-var htmlmin = require('gulp-htmlmin');
-var uglify = require('gulp-uglify');
-var obfuscate = require('gulp-obfuscate');
+const gulp = require('gulp');
+const sass = require('gulp-sass')(require('sass'));
+const imagemin = require('gulp-imagemin');
+const htmlmin = require('gulp-htmlmin');
+const uglify = require('gulp-uglify');
+const obfuscate = require('gulp-obfuscate');
 
 function compress_sass() {
     return gulp.src('./src/styles/main.scss')
@@ -26,7 +26,6 @@ function compress_html() {
 
 function compress_JS() {
     return gulp.src('./src/scripts/main.js')
-        .pipe(obfuscate())
         .pipe(gulp.dest('./dist/scripts'));
 }
 

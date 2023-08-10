@@ -14,15 +14,15 @@ function openOrClose() {
 const containerCarousel = document.getElementById('carousel');
 const image = document.querySelectorAll('#carousel img ');
 
-let idx = 0;
+let x = 0;
 
 function carousel() {
-    idx++;
-    if (idx > image.length - 1) {
-        idx = 0;
+    x++;
+    if (x > image.length - 1) {
+        x = 0;
     }
 
-    containerCarousel.style.transform = `translateX(${-idx * 100}%)`;
+    containerCarousel.style.transform = `translateX(${-x * 100}%)`;
 }
 
 setInterval(carousel, 2000);
