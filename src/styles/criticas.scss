@@ -1,0 +1,96 @@
+@use "variaveis";
+
+.criticas {
+    padding: 4rem 0;
+
+    @media (max-width: 767px) {
+        .container {
+            width: 100%;
+        }
+    }
+
+    .title {
+        border-bottom: 3px solid variaveis.$textColor;
+        max-width: 95%;
+        margin: 0 auto;
+    }
+
+    &__list {
+        padding: 3rem 1rem 0;
+
+        @media (max-width: 767px) {
+            padding: 3rem .5rem 0;
+        }
+
+        &__item {
+            background-color: #000000;
+            background-image: linear-gradient(180deg, #000 0%, #2a2a2a 100%);
+            border-radius: 8px;
+            border: 1px solid #fff;
+            margin-bottom: 1rem;
+
+            .autor {
+                cursor: pointer;
+                padding: 1rem 1rem;
+                display: grid;
+                grid-template-columns: 38% 60% 2%;
+                align-items: center;
+                border-radius: 8px;
+                transition: all .5s ease;
+
+                @media (max-width: 510px) {
+                    grid-template-columns: 1fr .25fr .10fr;
+                    padding: 1rem .5rem;
+                }
+
+                @media (max-width: 767px) and (min-width: 511px) {
+                    grid-template-columns: 1fr .8fr .10fr;
+                    padding: 1rem .5rem;
+                }
+
+                @media (max-width: 1023px) and (min-width: 768px) {
+                    grid-template-columns: 1fr .5fr .5fr;
+                }
+
+                &:hover {
+                    letter-spacing: 1px;
+                }
+
+                &__nome {
+                    border: none;
+                    margin: 4px 0 0;
+                    max-width: 99%;
+                }
+
+                &__nota {
+                    display: flex;
+                    align-items: center;
+                    color: variaveis.$textColor;
+                    font-size: 24px;
+                    font-style: normal;
+                    padding-bottom: 2px;
+
+                    @media (max-width: 510px) {
+                        font-size: 20px;
+                    }
+                }
+            }
+
+            .icon {
+                display: flex;
+                justify-content: end;
+                align-items: center;
+                color: variaveis.$textColor;
+                font-size: 24px;
+                font-weight: bold;
+            }
+
+            .critica {
+                height: 0;
+                overflow: hidden;
+                padding: 0 1.5rem;
+                transition: all .5s ease;
+            }
+        }
+    }
+}

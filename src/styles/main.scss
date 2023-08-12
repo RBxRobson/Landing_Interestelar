@@ -2,6 +2,7 @@
 @use "variaveis";
 @use "sinopse";
 @use "personagens";
+@use "criticas";
 
 @font-face {
     font-family: Roboto;
@@ -22,6 +23,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Roboto, sans-serif;
+    list-style: none;
 }
 
 body {
@@ -65,14 +67,22 @@ body {
 
 }
 
-.container {
-    width: 80%;
-    margin: 0 auto;
 
-    @media (max-width: 767px) {
-        width: 100%;
+
+section {
+
+    .container {
+        width: 80%;
+        margin: 0 auto;
+        height: 100%;
+
+        @media (max-width: 767px) {
+            width: 95%;
+        }
     }
 }
+
+
 
 .button {
     display: flex;
@@ -87,4 +97,8 @@ body {
     &:hover {
         background-color: rgba(255, 255, 255, 0.35);
     }
+}
+
+.d-none {
+    display: none;
 }

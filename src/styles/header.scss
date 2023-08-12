@@ -5,11 +5,13 @@
     background-size: cover;
     background-repeat: no-repeat;
     box-shadow: rgb(0, 0, 0) 0px -60px 50px -20px inset;
-    padding-top: 1rem;
-    padding-bottom: 2.5rem;
+    padding: 1rem 0 2rem 0;
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
 
     @media (max-width: 767px) {
-        background-size: cover;
         background-image: url(../imgs/background_mobile.jpg);
         padding-bottom: 2rem;
         padding-top: 0;
@@ -17,13 +19,11 @@
 
     @media (max-width: 1023px) and (min-width: 768px) {
         background-image: url(../imgs/background__tablet.jpg);
-
-        .container {
-            width: 95%;
-        }
     }
 
-    .content {
+    .container {
+        width: 80%;
+        margin: 0 auto;
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -32,113 +32,131 @@
             flex-direction: column;
         }
 
-        &__title {
+        @media (max-width: 1023px) and (min-width: 768px) {
+            width: 97%;
+        }
+    }
+
+    &__title {
+        width: 100%;
+        max-width: 400px;
+
+        @media (max-width: 767px) {
+            display: flex;
+            justify-content: center;
+        }
+
+
+        &__logo {
             width: 100%;
-            max-width: 400px;
 
-            &__logo {
+            @media (max-width: 1023px) and (min-width: 768px) {
                 width: 100%;
+                max-width: 400px;
+            }
 
-                @media (max-width: 1023px) and (min-width: 768px) {
-                    width: 100%;
-                    max-width: 400px;
-                }
+            @media (max-width: 767px) {
+                min-width: 330px;
+            }
 
+        }
+    }
+
+    &__menu {
+        position: relative;
+        display: flex;
+        align-items: center;
+
+        @media (max-width: 767px) {
+            width: 100%;
+            justify-content: center;
+        }
+
+        .foguete {
+            position: absolute;
+            height: 100px;
+            transition: 1.5s ease;
+            filter: grayscale(100%);
+            -webkit-transform: translateX(16.5rem) rotate(-135deg) scale(.6);
+            -moz-transform: translateX(16.8rem) rotate(-135deg) scale(.6);
+
+            @media (max-width: 1023px) and (min-width: 768px) {
+                -webkit-transform: translateX(12rem) rotate(-135deg) scale(.6);
+                -moz-transform: translateX(12.5rem) rotate(-135deg) scale(.6);
+            }
+
+            @media (min-width: 571px) and (max-width: 767px) {
+                -webkit-transform: translateX(-5rem) rotate(45deg) scale(.45);
+                -moz-transform: translateX(-5.4rem) rotate(45deg) scale(.45);
+            }
+
+            @media (max-width: 570px) {
+                -webkit-transform: translateX(-5rem) rotate(45deg) scale(.45);
+                -moz-transform: translateX(-5rem) rotate(45deg) scale(.45);
             }
         }
 
-        &__menu {
-            position: relative;
+        &__itens {
+            height: 40px;
             display: flex;
-            align-items: center;
+            gap: 0 10px;
+            transition: .3s ease-in;
 
             @media (max-width: 767px) {
-                width: 100%;
+                flex-direction: row-reverse;
                 justify-content: center;
+                gap: 1%;
+                width: 100%;
+                height: 30px;
             }
 
-            .foguete {
-                position: absolute;
-                height: 100px;
-                transition: 1.5s ease;
-                filter: grayscale(100%);
-                -webkit-transform: translateX(16.5rem) rotate(-135deg) scale(.6);
-                -moz-transform: translateX(16.8rem) rotate(-135deg) scale(.6);
+            .selector__button {
+                visibility: hidden;
+                opacity: 0;
+                color: variaveis.$textColor;
+                font-size: 1.1em;
+                font-weight: bold;
+                padding: 1rem 1rem .9rem;
 
                 @media (max-width: 1023px) and (min-width: 768px) {
-                    -webkit-transform: translateX(12rem) rotate(-135deg) scale(.6);
-                    -moz-transform: translateX(12.5rem) rotate(-135deg) scale(.6);
+                    padding: 1rem .5rem .8rem;
+                    font-size: 1em;
                 }
-
-                @media (min-width: 571px) and (max-width: 767px) {
-                    -webkit-transform: translateX(-5rem) rotate(45deg) scale(.5);
-                    -moz-transform: translateX(-5.4rem) rotate(45deg) scale(.5);
-                }
-
-                @media (max-width: 570px) {
-                    -webkit-transform: translateX(-5rem) rotate(45deg) scale(.5);
-                    -moz-transform: translateX(-5rem) rotate(45deg) scale(.5);
-                }
-            }
-
-            &__itens {
-                height: 40px;
-                display: flex;
-                gap: 0 10px;
-                transition: .3s ease-in;
 
                 @media (max-width: 767px) {
-                    flex-direction: row-reverse;
-                    justify-content: center;
-                    gap: 1%;
-                    width: 100%;
-                    height: 36px;
+                    padding: .8rem .5rem .8rem;
+                    font-size: 1em;
                 }
+            }
 
-                .selector__button {
-                    visibility: hidden;
-                    opacity: 0;
-                    color: variaveis.$textColor;
-                    font-size: 1.1em;
-                    font-weight: bold;
-                    padding: 1rem 1rem .9rem;
-
-                    @media (max-width: 1023px) and (min-width: 768px) {
-                        padding: 1rem .5rem .8rem;
-                        font-size: 1em;
-                    }
+            .hamburguer__button {
+                .icon {
+                    width: 36px;
 
                     @media (max-width: 767px) {
-                        padding: 1rem .5rem .8rem;
-                        font-size: 1em;
+                        width: 30px;
                     }
                 }
+            }
+        }
 
-                .hamburguer__button {
-                    .icon {
-                        width: 36px;
-                    }
+
+        &--is-open {
+            .foguete {
+                opacity: .8;
+                transition: 1s ease-out;
+                transform: translateX(-15vw) rotate(-120deg) scale(-0);
+
+                @media (max-width: 768px) {
+                    transform: translateX(100vw) rotate(30deg) scale(-0);
                 }
             }
 
 
-            &--is-open {
-                .foguete {
-                    opacity: .8;
-                    transition: 1s ease-out;
-                    transform: translateX(-15vw) rotate(-120deg) scale(-0);
-
-                    @media (max-width: 768px) {
-                        transform: translateX(100vw) rotate(30deg) scale(-0);
-                    }
-                }
-
-
-                .selector__button {
-                    visibility: visible;
-                    opacity: 1;
-                    transition: 1s ease-in;
-                }
+            .selector__button {
+                visibility: visible;
+                opacity: 1;
+                transition: 1s ease-in;
             }
         }
     }

@@ -12,100 +12,177 @@
 <body>
     <header class="header">
         <div class="container">
-            <div class="content">
-                <h1 class="content__title">
-                    <img class="content__title__logo" src="./imgs/logo_interestellar.png" alt="Logo interestelar">
-                </h1>
-                <nav class="content__menu">
-                    <img class="foguete" src="./imgs/startup.png" alt="Foguete">
-                    <div class="content__menu__itens">
-                        <a class="button selector__button" href="#sinopse">Sinopse</a>
-                        <a class="button selector__button" href="#personagens">Personagens</a>
-                        <a class="button selector__button" href="#criticas">Criticas</a>
-                        <button data-menu-open class="button hamburguer__button">
-                            <img class="icon" src="./imgs/hamburguer.svg">
-                        </button>
-                    </div>
-                </nav>
-            </div>
+            <h1 class="header__title">
+                <img class="header__title__logo" src="./imgs/logo_interestellar.png" alt="Logo interestelar">
+            </h1>
+            <nav class="header__menu">
+                <img class="foguete" src="./imgs/startup.png" alt="Foguete">
+                <div class="header__menu__itens">
+                    <a class="button selector__button" href="#sinopse">Sinopse</a>
+                    <a class="button selector__button" href="#personagens">Personagens</a>
+                    <a class="button selector__button" href="#criticas">Criticas</a>
+                    <button data-menu-open class="button hamburguer__button">
+                        <img class="icon" src="./imgs/hamburguer.svg">
+                    </button>
+                </div>
+            </nav>
         </div>
     </header>
-    <section id="sinopse" class="container sinopse">
-        <div class="sinopse__carousel">
-            <div class="sinopse__carousel__container" id="carousel">
-                <a href="./imgs/carrosel/carrosel_cena1.jpg" target="_blank" class="link__img">
-                    <img src="./imgs/carrosel/carrosel_cena1.jpg" alt="cena interestelar">
-                </a>
-                <a href="./imgs/carrosel/carrosel_cena2.png" target="_blank" class="link__img">
-                    <img src="./imgs/carrosel/carrosel_cena2.png" alt="cena interestelar">
-                </a>
-                <a href="./imgs/carrosel/carrosel_cena3.png" target="_blank" class="link__img">
-                    <img src="./imgs/carrosel/carrosel_cena3.png" alt="cena interestelar">
-                </a>
-                <a href="./imgs/carrosel/carrosel_cena4.png" target="_blank" class="link__img">
-                    <img src="./imgs/carrosel/carrosel_cena4.png" alt="cena interestelar">
-                </a>
+    <section id="sinopse" class="sinopse">
+        <div class="container">
+            <div class="sinopse__carousel">
+                <div class="sinopse__carousel__container" id="carousel">
+                    <a href="./imgs/carrosel/carrosel_cena1.jpg" target="_blank" class="link__img">
+                        <img src="./imgs/carrosel/carrosel_cena1.jpg" alt="cena interestelar">
+                    </a>
+                    <a href="./imgs/carrosel/carrosel_cena2.png" target="_blank" class="link__img">
+                        <img src="./imgs/carrosel/carrosel_cena2.png" alt="cena interestelar">
+                    </a>
+                    <a href="./imgs/carrosel/carrosel_cena3.png" target="_blank" class="link__img">
+                        <img src="./imgs/carrosel/carrosel_cena3.png" alt="cena interestelar">
+                    </a>
+                    <a href="./imgs/carrosel/carrosel_cena4.png" target="_blank" class="link__img">
+                        <img src="./imgs/carrosel/carrosel_cena4.png" alt="cena interestelar">
+                    </a>
+                </div>
+            </div>
+            <div class="sinopse__text">
+                <h2 class="title">SINOPSE</h2>
+                <p class="text">As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a
+                    missão de
+                    verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da
+                    espécie. Cooper é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os
+                    filhos. Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.</p>
             </div>
         </div>
-        <div class="sinopse__text">
-            <h2 class="title">SINOPSE</h2>
-            <p class="text">As reservas naturais da Terra estão chegando ao fim e um grupo de astronautas recebe a
-                missão de
-                verificar possíveis planetas para receberem a população mundial, possibilitando a continuação da
-                espécie. Cooper é chamado para liderar o grupo e aceita a missão sabendo que pode nunca mais ver os
-                filhos. Ao lado de Brand, Jenkins e Doyle, ele seguirá em busca de um novo lar.</p>
+    </section>
+    <section id="personagens" class="personagens">
+        <div class="container">
+            <h2 class="title">Personagens Principais</h2>
+            <div class="personagens__container">
+                <article class="personagens__container__card">
+                    <h4 class="title">Joseph Cooper</h4>
+                    <img src="./imgs/personagens/Joseph_Cooper.png"
+                        alt="Joseph Cooper interpretado por Matthew McConaughey">
+                    <p class="text">O principal protagonista da série, Joseph Cooper, um piloto viúvo da NASA que se
+                        tornou
+                        fazendeiro quando o governo dos Estados Unidos fechou a agência, é interpretado por Matthew
+                        McConaughey.
+                    </p>
+                </article>
+                <article class="personagens__container__card">
+                    <h4 class="title">Dra. Amelia Brand</h4>
+                    <img src="./imgs/personagens/Dra_ Amelia_Brand.png"
+                        alt="Dra. Amelia Brand interpretado por Anne Hathaway">
+                    <p class="text">Dra. Amelia Brand, a dedicada cientista e astronauta da NASA que se junta à missão
+                        intergaláctica de Cooper para encontrar um novo lar para a humanidade, é interpretada por Anne
+                        Hathaway.
+                    </p>
+                </article>
+                <article class="personagens__container__card">
+                    <h4 class="title">Murphy “Murph” Cooper</h4>
+                    <img src="./imgs/personagens/Murphy.jpg"
+                        alt="Murphy “Murph” Cooper interpretada por Mackenzie Foy / Jessica Chastain / Ellen Burstyn">
+                    <p class="text">A filha de Cooper, Murphy, é interpretada por Mackenzie Foy como uma criança
+                        precoce,
+                        Jessica Chastain como uma adulta que se tornou uma cientista da NASA e Ellen Burstyn como uma
+                        mulher
+                        idosa.
+                    </p>
+                </article>
+                <article class="personagens__container__card">
+                    <h4 class="title">Professor John Brand</h4>
+                    <img src="./imgs/personagens/Professor_John_Brand.png"
+                        alt="Professor John Brand interpretado por Michael Caine">
+                    <p class="text">O professor da NASA John Brand, pai de Amelia e ex-mentor de Cooper interpretado por
+                        Michael Caine.
+                    </p>
+                </article>
+                <article class="personagens__container__card">
+                    <h4 class="title">Donald</h4>
+                    <img src="./imgs/personagens/Donald.png" alt="Donald interpretado por John Lithgow">
+                    <p class="text">O rabugento sogro de Cooper, Donald, é interpretado por John Lithgow.</p>
+                </article>
+                <article class="personagens__container__card">
+                    <h4 class="title">Mann</h4>
+                    <img src="./imgs/personagens/Mann.png" alt="Mann interpretado por Matt Damon">
+                    <p class="text">O astronauta que engana o Resistência tripulação antes de tentar sequestrar seu
+                        navio,
+                        Mann, é interpretado por Matt Damon.
+                    </p>
+                </article>
+            </div>
         </div>
     </section>
-    <section id="personagens" class="container personagens">
-        <h2 class="title">Personagens Principais</h2>
-        <div class="personagens__container">
-            <article class="personagens__container__card">
-                <h4 class="title">Joseph Cooper</h4>
-                <img src="./imgs/personagens/Joseph_Cooper.png"
-                    alt="Joseph Cooper interpretado por Matthew McConaughey">
-                <p class="text">O principal protagonista da série, Joseph Cooper, um piloto viúvo da NASA que se tornou
-                    fazendeiro quando o governo dos Estados Unidos fechou a agência, é interpretado por Matthew
-                    McConaughey.
-                </p>
-            </article>
-            <article class="personagens__container__card">
-                <h4 class="title">Dra. Amelia Brand</h4>
-                <img src="./imgs/personagens/Dra_ Amelia_Brand.png"
-                    alt="Dra. Amelia Brand interpretado por Anne Hathaway">
-                <p class="text">Dra. Amelia Brand, a dedicada cientista e astronauta da NASA que se junta à missão
-                    intergaláctica de Cooper para encontrar um novo lar para a humanidade, é interpretada por Anne
-                    Hathaway.
-                </p>
-            </article>
-            <article class="personagens__container__card">
-                <h4 class="title">Murphy “Murph” Cooper</h4>
-                <img src="./imgs/personagens/Murphy.jpg"
-                    alt="Murphy “Murph” Cooper interpretada por Mackenzie Foy / Jessica Chastain / Ellen Burstyn">
-                <p class="text">A filha de Cooper, Murphy, é interpretada por Mackenzie Foy como uma criança precoce,
-                    Jessica Chastain como uma adulta que se tornou uma cientista da NASA e Ellen Burstyn como uma mulher
-                    idosa.
-                </p>
-            </article>
-            <article class="personagens__container__card">
-                <h4 class="title">Professor John Brand</h4>
-                <img src="./imgs/personagens/Professor_John_Brand.png"
-                    alt="Professor John Brand interpretado por Michael Caine">
-                <p class="text">O professor da NASA John Brand, pai de Amelia e ex-mentor de Cooper interpretado por
-                    Michael Caine.
-                </p>
-            </article>
-            <article class="personagens__container__card">
-                <h4 class="title">Donald</h4>
-                <img src="./imgs/personagens/Donald.png" alt="Donald interpretado por John Lithgow">
-                <p class="text">O rabugento sogro de Cooper, Donald, é interpretado por John Lithgow.</p>
-            </article>
-            <article class="personagens__container__card">
-                <h4 class="title">Mann</h4>
-                <img src="./imgs/personagens/Mann.png" alt="Mann interpretado por Matt Damon">
-                <p class="text">O astronauta que engana o Resistência tripulação antes de tentar sequestrar seu navio,
-                    Mann, é interpretado por Matt Damon.
-                </p>
-            </article>
+    <section class="criticas" id="criticas">
+        <div class="container">
+            <h2 class="title">Principais críticas da imprensa</h2>
+            <ul class="criticas__list">
+                <li class="criticas__list__item ">
+                    <div data-critica class="autor">
+                        <h3 class="title autor__nome">Almanaque Virtual</h3>
+                        <span class="autor__nota">★★★★★</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="critica">
+                        <p class="text">Apesar da fantasia de ficção científica que veste, “Interestelar” é um faroeste.
+                            Um faroeste metafísico. Um bangue-bangue sem tiros (mas com cenas de perigo com adrenalina
+                            fora das CNTPs toleráveis).</p>
+                    </div>
+                </li>
+                <li class="criticas__list__item ">
+                    <div data-critica class="autor">
+                        <h3 class="title autor__nome">New York Times</h3>
+                        <span class="autor__nota">★★★★★</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="critica">
+                        <p class="text">"Interstellar" pode ocupar o seu lugar no panteão dos filmes espaciais porque
+                            responde a uma necessidade terrena aguda, um desejo não só de aventura e novidade, mas
+                            também, no fim das contas, de conforto.</p>
+                    </div>
+                </li>
+                <li class="criticas__list__item ">
+                    <div data-critica class="autor">
+                        <h3 class="title autor__nome">The Hollywood Reporter</h3>
+                        <span class="autor__nota">★★★★★</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="critica">
+                        <p class="text">Este filme épico grandiosamente concebido e executado tenta dar peso igual para
+                            as
+                            emoções humanas íntimas e especulações sobre o cosmos, com resultados mistos, mas nunca
+                            menos do que cativantes, por vezes, mais do que isso.</p>
+                    </div>
+                </li>
+                <li class="criticas__list__item ">
+                    <div data-critica class="autor">
+                        <h3 class="title autor__nome">Adoro Cinema</h3>
+                        <span class="autor__nota">★★★★☆</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="critica">
+                        <p class="text">Interestelar é o filme mais ambicioso de Christopher Nolan. E olha que estamos
+                            falando do cara que fez a trilogia do O Cavaleiro das Trevas e A Origem. Em seu novo
+                            projeto, o
+                            diretor decidiu realizar um longa sobre o homem, abordando sua natureza devastadora, mas
+                            também
+                            exploradora e empreendedora. </p>
+                    </div>
+                </li>
+                <li class="criticas__list__item ">
+                    <div data-critica class="autor">
+                        <h3 class="title autor__nome">Chicago Sun-Times</h3>
+                        <span class="autor__nota">★★★★☆</span>
+                        <span class="icon">+</span>
+                    </div>
+                    <div class="critica">
+                        <p class="text">A câmera raramente conta a história nos filmes de Nolan.[...] Ainda assim,
+                            "Interstellar" é um filme impressionante, às vezes assombroso, que tomou conta de mim ao
+                            ponto de desvanecer minhas objeções usuais ao trabalho de Nolan.</p>
+                    </div>
+                </li>
+            </ul>
         </div>
     </section>
     <script src="./scripts/main.js"></script>

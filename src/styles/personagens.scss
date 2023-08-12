@@ -1,14 +1,9 @@
 @use "variaveis";
 
-
-.container {
-    @media (max-width: 767px) {
-        width: 90% !important;
-    }
-}
-
 .personagens {
-    padding: 1rem 0;
+    @media (max-width: 767px) {
+        padding-top: 3rem;
+    }
 
     h2 {
         border-bottom: 3px solid variaveis.$textColor;
@@ -19,7 +14,7 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         column-gap: 5%;
-        row-gap: 8%;
+        row-gap: 2%;
 
         @media (max-width: 1023px) and (min-width: 768px) {
             grid-template-columns: 1fr 1fr;
@@ -29,7 +24,7 @@
         @media (max-width: 767px) {
             display: flex;
             flex-direction: column;
-            gap: 2rem;
+            gap: 2rem 0;
         }
 
 
