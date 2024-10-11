@@ -2,7 +2,7 @@
     "version": 2,
     "builds": [
       {
-        "src": "gulpfile.mjs",
+        "src": "package.json",
         "use": "@vercel/static-build",
         "config": {
           "distDir": "dist"
@@ -19,5 +19,4 @@
         "dest": "dist/$1"
       }
     ]
-  }
-  
+}
