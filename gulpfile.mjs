@@ -1,6 +1,5 @@
 import gulp from 'gulp';
 import sass from 'gulp-sass';
-import imagemin from 'gulp-imagemin';
 import htmlmin from 'gulp-htmlmin';
 import uglify from 'gulp-uglify-es';
 import javascriptObfuscator from 'gulp-javascript-obfuscator';
@@ -16,17 +15,6 @@ function compress_sass() {
         .pipe(sassCompiler({ outputStyle: "compressed" })) // Usar o compilador de Sass
         .pipe(sourcemaps.write('.')) // Escrever sourcemaps
         .pipe(gulp.dest("./dist/styles"));
-}
-
-function compress_img() {
-    return gulp.src('./src/imgs/**/*')
-        .pipe(imagemin({
-            optimizationLevel: 5,
-            progressive: true,
-            interlaced: true,
-            verbose: true // Para mais detalhes durante a execução
-        }))
-        .pipe(gulp.dest('./dist/imgs'));
 }
 
 function compress_html() {
@@ -45,12 +33,11 @@ function compress_JS() {
 }
 
 // Exportar a tarefa build como a tarefa padrão
-const build = gulp.parallel(compress_img, compress_sass, compress_html, compress_JS);
+const build = gulp.parallel(compress_sass, compress_html, compress_JS);
 export default build; // Definir a tarefa padrão
 
 export const watch = function () {
     gulp.watch('./src/styles/*.scss', compress_sass);
-    gulp.watch('./src/imgs/**/*', compress_img);
     gulp.watch('./src/index.html', compress_html);
     gulp.watch('./src/scripts/*.js', compress_JS);
 }
