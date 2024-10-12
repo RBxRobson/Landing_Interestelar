@@ -14,7 +14,6 @@
   "dependencies": {
     "gulp": "^5.0.0",
     "gulp-htmlmin": "^5.0.1",
-    "gulp-imagemin": "^9.1.0",
     "gulp-sass": "^5.1.0",
     "gulp-sourcemaps": "^2.6.5",
     "readable-stream": "^4.4.2",
