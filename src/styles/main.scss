@@ -5,102 +5,96 @@
 @use "criticas";
 
 @font-face {
-    font-family: Roboto;
-    src: url(../../assets/fonts/Roboto-Regular.woff2);
-    font-weight: 400;
-    font-display: swap;
+  font-family: Roboto;
+  src: url(../assets/fonts/Roboto-Regular.woff2);
+  font-weight: 400;
+  font-display: swap;
 }
 
 @font-face {
-    font-family: Didot;
-    src: url(../../assets/fonts/DidotLTPro-Bold.woff2);
-    font-weight: 700;
-    font-display: swap;
+  font-family: Didot;
+  src: url(../assets/fonts/DidotLTPro-Bold.woff2);
+  font-weight: 700;
+  font-display: swap;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Roboto, sans-serif;
-    list-style: none;
-    scroll-behavior: smooth;
-    scroll-padding-top: 180px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, sans-serif;
+  list-style: none;
+  scroll-behavior: smooth;
+  scroll-padding-top: 180px;
 }
 
 body {
-    background-color: variaveis.$background;
+  background-color: variaveis.$background;
 }
 
-@mixin text ($fontSize: 22px) {
-    font-size: $fontSize;
-    font-family: Roboto, sans-serif;
-    color: variaveis.$textColor;
+@mixin text($fontSize: 22px) {
+  font-size: $fontSize;
+  font-family: Roboto, sans-serif;
+  color: variaveis.$textColor;
 }
 
-@mixin title ($fontSize: 28px) {
-    font-size: $fontSize;
-    font-family: Didot, sans-serif;
-    color: variaveis.$textColor;
+@mixin title($fontSize: 28px) {
+  font-size: $fontSize;
+  font-family: Didot, sans-serif;
+  color: variaveis.$textColor;
 }
 
 .text {
-    @include text;
+  @include text;
 
-    @media (max-width: 1300px) {
-        @include text(18px);
-    }
+  @media (max-width: 1300px) {
+    @include text(18px);
+  }
 
-    @media (max-width: 767px) {
-        @include text(16px);
-    }
+  @media (max-width: 767px) {
+    @include text(16px);
+  }
 }
 
 .title {
-    @include title;
+  @include title;
 
-    @media (max-width: 1300px) {
-        @include title(24px);
-    }
+  @media (max-width: 1300px) {
+    @include title(24px);
+  }
 
-    @media (max-width: 767px) {
-        @include title(22px);
-    }
-
+  @media (max-width: 767px) {
+    @include title(22px);
+  }
 }
-
-
 
 section {
+  .container {
+    width: 80%;
+    margin: 0 auto;
+    height: 100%;
 
-    .container {
-        width: 80%;
-        margin: 0 auto;
-        height: 100%;
-
-        @media (max-width: 767px) {
-            width: 95%;
-        }
+    @media (max-width: 767px) {
+      width: 95%;
     }
+  }
 }
 
-
-
 .button {
-    display: flex;
-    align-items: center;
-    border: 2px solid rgba(255, 255, 255, 0.50);
-    cursor: pointer;
-    text-decoration: none;
-    border-radius: 4px;
-    background-color: rgba(255, 255, 255, 0.30);
-    transition: .5s ease;
+  display: flex;
+  align-items: center;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  text-decoration: none;
+  border-radius: 4px;
+  background-color: rgba(255, 255, 255, 0.3);
+  transition: 0.5s ease;
 
-    &:hover {
-        background-color: rgba(255, 255, 255, 0.35);
-    }
+  &:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+  }
 }
 
 .d-none {
-    display: none;
+  display: none;
 }
